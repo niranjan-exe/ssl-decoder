@@ -1,19 +1,3 @@
-<!--
-    Copyright (C) 2015 Remy van Elst
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
--->
 <?php
 error_reporting(E_ALL & ~E_NOTICE);
 ob_start();
@@ -103,12 +87,10 @@ foreach (glob("functions/*.php") as $filename) {
 
         <li><a href="<?php echo(htmlspecialchars($current_folder)); ?>">Try another website</a></li>
         <li><hr></li>
-        <li><a href="https://certificatemonitor.org/">Certificate Expiry Monitor</a></li>
-        <li><a href="https://cipherli.st/">Strong Cipherlists</a></li>
-        <li><a href="https://raymii.org/s/tutorials/Strong_SSL_Security_On_Apache2.html">Apache SSL Tutorial</a></li>
-        <li><a href="https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html">NGINX SSL Tutorial</a></li>
-        <li><a href="https://raymii.org/s/tutorials/Strong_SSL_Security_On_lighttpd.html">Lighttpd SSL Tutorial</a></li>
-        <li><a href="https://raymii.org">Raymii.org</a></li>
+        <li><a href="#/">Certificate Expiry Monitor</a></li>
+        <li><a href="#">Apache SSL Tutorial</a></li>
+        <li><a href="#">NGINX SSL Tutorial</a></li>
+        <li><a href="#">Lighttpd SSL Tutorial</a></li>
       </ul>
     </nav>
   </div>
@@ -161,9 +143,6 @@ foreach (glob("functions/*.php") as $filename) {
         }
 
         echo "<script type='text/javascript'>document.title = \"" . htmlspecialchars($host) . ":" . htmlspecialchars($port) . " - SSL Decoder \"</script>";
-
-        echo "<p>Receive notifications when this certificate is about to expire with my other service, <a href='https://certificatemonitor.org/'>Certificate Monitor</a>.</p>";
-
         // connection data
         echo "<div class='content'><section id='conndata'>";
         echo "<header><h2>Connection Data for " . htmlspecialchars($host) . " / " . htmlspecialchars($ip) . "</h2></header>";
